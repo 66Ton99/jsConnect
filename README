@@ -1,1 +1,3 @@
 Documentation http://vanillaforums.org/docs/jsconnect
+
+This is a fork of the Vanilla forum jsConnect module which has one small bug fixed which prevents the use of the module on sites which trigger the jsConnect integration via a URL with a question mark in it (i.e. http://www.website.com/index.php?url=jsconnect)
