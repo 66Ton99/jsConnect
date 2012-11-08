@@ -89,7 +89,9 @@ class JsConnectPlugin extends Gdn_Plugin {
       if (StringBeginsWith($Query['Target'], '/entry/signin'))
          $Query['Target'] = '/';
       
-      $Result = $Url.'?'.http_build_query($Query);
+      $questionMark = (strpos($Url,'?')) ? '&' : '?';
+      $Result = $Url.$questionMark.http_build_query($Query);
+
       if ($Callback)
          $Result .= '&callback=?';
       return $Result;
